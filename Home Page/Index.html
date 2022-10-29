@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Netflix </title>
+    <link rel="stylesheet" href="../Home Page/Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Poppins:ital,wght@0,200;0,300;0,400;1,200&family=Roboto+Condensed:wght@300;400&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+<!-- Netflix navbar at top -->
+        <nav id="navbar" class="navbar">
+            <div class="nav-left">
+                <a href="../Home Page/Index.html">
+                    <img src="../Home Page/Images/Netflix-Logo.png" id="netflixlogo" alt="Netflix Logo"> 
+                </a>
+                <ul class="primary-navigation">
+                    <li class="category">
+                        <a class="browse-active" href="../Home Page/Index.html"> Home </a>
+                    </li>
+                    <li class="category">
+                        <a class="browse-active" href="#movies"> Movies </a>
+                    </li>
+                    <li class="category">
+                        <a class="browse-active" href="#tvshows"> TV Shows </a>
+                    </li>
+                    <li class="category">
+                        <a class="browse-active" href="#popular"> Popular </a>
+                    </li>
+                    <li class="category">
+                        <button><a class="watchlist" href="../Home Page/Watchlist/Watchlist.html"> My List </a></button>
+                    </li>
+                    <li class="category">
+                        <a class="browse-active" href="#comingSoon"> Coming Soon </a>
+                    </li>
+                </ul>
+            </div>
+
+<!-- Netflix Right hand navbar section (Search bar, Movie profile and Notification icon) -->
+            <input type="text" class="navRight" id="search-bar" placeholder="Search" />
+		           </div>
+            <div class="nav-right">
+              <ul class="list-nav-right">
+                  <li class="category">
+                        <a class="browse-active" href="../Login page/Main.html"> Me </a>
+                    </li>
+                </ul>
+                <button class="notfications-btn"><img class="notification" src="../Home Page/Images/notification-icon.png" alt="Notifications"></button>
+                <button class="my-profile"><img class="my-profile" src="../Home Page/Images/AvatarIcon.jpg" alt="My Profile"></button>
+            </div>
+        </nav>
+        </nav>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</div>
+
+<!-- Movie Banner -->
+    <div class="banner" id="banner">
+<!-- Added picture element for large images -->    
+      <picture>
+        <video id="video" class="banner" poster="../Home Page/Images/purple hearts 3.jpg" media="(max-width:600px)" style="pointer-events:none;">
+            <source src="../Home Page/Videos/yt5s.com-Purple Hearts _ Sneak Peek Exclusive Clip _ Netflix-(1080p).mp4" type="video/mp4"/>
+        </video>
+      </picture>
+        <div class="banner_contents">
+            <h2 class="banner_title"> Purple Hearts </h2>
+            <div class="banner_buttons">
+          <!-- "Play" button actually plays the teaser trailer for the new and upcoming movie, Purple Hearts -->
+                <button class="banner_button" id="btnPlayPause" accesskey="p" onclick="playPauseVideo()"> Play </button>
+                <button class="banner_button"> My List </button>
+            </div>
+            <div class="banner_desc">
+                Based on the 2017 Tess Wakefield novel. Cassie, a struggling singer-songwriter who vowed never to date military guys, then weds a Marine named Luke in a marriage of convenience.
+            </div>
+        </div>
+    </div>
+
+<!-- Coming soon movies at top -->
+    <h1 class="section-title" id="comingSoon"> Coming Soon </h1>
+    <div class="media-container">
+      <div class="media-scroller">
+  
+      <!--   Group 1 -->
+        <div class="media-group" id="group-1">
+          <div class="media-element">
+            <img id="image"
+              src="../Home Page/Images/love in the villa.jpg"
+              alt="love in the villa poster" >
+              <h4 class="movie-title"> Love in the Villa </h4>
+              <p class="movie-desc">A young woman takes a trip to romantic Verona, Italy, after a breakup, only to find that the villa she reserved was double-booked, and she'll have to share her vacation with a cynical British man. </p>
+        <!-- "Play" movie button redirects you to the actual trailer of the desired movie -->
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/_kRab62q54M';"><div> Play</div></button>
+        <!-- "My List" button was supposed you to add to a personalized watchlist feature but unfortunatley could not work --> 
+              <button class="banner_button" type="submit"><div>My List</div></button>
+            </div>
+        <!-- Added Image responsiveness in CSS @media-queries -->
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/After Ever Happy 1.jpg"
+              alt="after ever happy poster">
+          <!-- Added Title of desired movie -->
+              <h4 class="movie-title"> After Ever Happy </h4>
+          <!-- Added Movie Description  -->
+              <p class="movie-desc"> As a shocking truth about a couple's families emerges, the two lovers discover they are not so different from each other. Tessa is no longer the sweet, simple, good girl she was when she met Hardin — any more than he is the cruel, moody boy she fell so hard for. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/TlAukkPK-dc';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+ 
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/cobra kai.jpg"
+              alt="cobra kai poster">
+              <h4 class="movie-title"> Cobra Kai </h4>
+              <p class="movie-desc"> Decades after their 1984 All Valley Karate Tournament bout, a middle-aged Daniel LaRusso and Johnny Lawrence find themselves martial-arts rivals again. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/sUR9PYwlNaA';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/bridgerton s2.jpg"
+              alt="bridgerton poster">
+              <h4 class="movie-title"> Bridgerton </h4>
+              <p class="movie-desc"> Wealth, lust, and betrayal set against the backdrop of Regency-era England, seen through the eyes of the powerful Bridgerton family. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Bs9r1UbmFAI';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/fate the winx saga.jpg"
+              alt="fate the winx saga poster">
+              <h4 class="movie-title"> Fate: The Winx Saga </h4>
+              <p class="movie-desc"> A live-action adaptation of Nickelodeon's Winx Club (2004). It follows Bloom as she adjusts to life in the Otherworld, where she must learn to control her dangerous magical powers. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/YlNEvyjEWLQ';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+  
+          <a class="next" href="#group-2" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 2   -->
+        <div class="media-group" id="group-2">
+          <a class="previous" href="#group-1">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/elektra.jpg"
+              alt="elektra poster">
+              <h4 class="movie-title"> Elektra </h4>
+              <p class="movie-desc"> Wealth, lust, and betrayal set against the backdrop of Regency-era England, seen through the eyes of the powerful Bridgerton family. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/XGnADb5e0mc';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/mr and mrs smith.jpg"
+              alt="mr and mrs smith poster">
+              <h4 class="movie-title"> Mr & Mrs Smith </h4>
+              <p class="movie-desc"> A bored married couple is surprised to learn that they are both assassins hired by competing agencies to kill each other. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/CZ0B22z22pI';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/good girls 1.jpg"
+              alt="good girls poster">
+              <h4 class="movie-title"> Good Girls </h4>
+              <p class="movie-desc"> Three suburban mothers suddenly find themselves in desperate circumstances and decide to stop playing it safe and risk everything to take back their power. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/kbjIaPzODs0';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/he's all that.jpg"
+              alt="he's all that poster">
+              <h4 class="movie-title"> He's All That </h4>
+              <p class="movie-desc"> A teenage girl sets out to give a nebbish classmate the ultimate high school makeover. An updated remake of the 1999 film, 'She's All That'. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/XqTPaRz8Nx8';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/riverdale.jpg"
+              alt="riverdale poster">
+              <h4 class="movie-title"> Riverdale </h4>
+              <p class="movie-desc"> While navigating the troubled waters of romance, school and family, Archie and his gang become entangled in dark Riverdale mysteries. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/HxtLlByaYTc';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <a class="next" href="#group-3" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 3   -->
+        <div class="media-group" id="group-3">
+          <a class="previous" href="#group-2">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/blood and water.jpg"
+              alt="blood and water poster">
+              <h4 class="movie-title"> Blood & Water </h4>
+              <p class="movie-desc"> A local teen uncovers her family's secret past and navigates the complicated world of a South African high school. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/2m0Cm2kMOBU';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the sandman.jpg"
+              alt="the sandman poster">
+              <h4 class="movie-title"> The Sandman </h4>
+              <p class="movie-desc"> Upon escaping after decades of imprisonment by a mortal wizard, Dream, the personification of dreams, sets about to reclaim his lost equipment. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/83ClbRPRDXU';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/dynasty.jpg"
+              alt="dynasty poster">
+              <h4 class="movie-title"> Dynasty </h4>
+              <p class="movie-desc"> Follows two of America's wealthiest families as they feud for control over their fortune and their children. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Uq0soWMpkv8';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/fifty shades freed.jpg"
+              alt="fifty shades freed poster">
+              <h4 class="movie-title"> Fifty Shades: Freed </h4>
+              <p class="movie-desc"> Anastasia and Christian get married, but Jack Hyde continues to threaten their relationship. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/av4zbG8dAhk';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/me time.jpg"
+              alt="me time poster">
+              <h4 class="movie-title"> Me Time </h4>
+              <p class="movie-desc"> Follows a dad who finds time for himself for the first time in years while his wife and kids are away. He reconnects with a friend for a wild weekend. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Mmq_NVwLN_g';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <a class="next" href="#group-4" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!--  Group 4  -->
+        <div class="media-group" id="group-4">
+          <a class="previous" href="#group-3">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/halftime.jpg"
+              alt="halftime poster">
+              <h4 class="movie-title"> Jennifer Lopez: Halftime </h4>
+              <p class="movie-desc"> Global superstar Jennifer Lopez reflects on her multifaceted career and the pressure of life in the spotlight in this intimate documentary. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/-voLo_TIWf4';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the gray man.jpg"
+              alt="the gray man poster">
+              <h4 class="movie-title"> The Gray Man </h4>
+              <p class="movie-desc"> When the CIA's most skilled operative-whose true identity is known to none-accidentally uncovers dark agency secrets, a psychopathic former colleague puts a bounty on his head, setting off a global manhunt by international assassins. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/BmllggGO4pM';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/interceptor.jpg"
+              alt="interceptor poster">
+              <h4 class="movie-title"> Interceptor </h4>
+              <p class="movie-desc"> One Army captain must use her years of tactical training and military expertise when a simultaneous coordinated attack threatens the remote missile interceptor station she is in command of. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/OQSoII4Bj1o';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/outer banks.jpg"
+              alt="outerbanks poster">
+              <h4 class="movie-title"> Outer Banks </h4>
+              <p class="movie-desc"> A group of teenagers from the wrong side of the tracks stumble upon a treasure map that unearths a long-buried secret </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/uk_hFfUFXh4';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/peaky blinders.jpg"
+              alt="peaky blinders poster">
+              <h4 class="movie-title"> Peaky Blinders </h4>
+              <p class="movie-desc"> A gangster family epic set in 1900s England, centering on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/oVzVdvGIC7U';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+        </div>
+  
+        <div class="navigation-indicators">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+      </div>
+    </div>
+    <svg>
+      <symbol id="next" viewBox="0 0 256 512">
+        <path fill="White"
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+      </symbol>
+  
+      <symbol id="previous" viewBox="0 0 256 512">
+        <path fill="White"
+          d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+      </symbol>
+    </svg>
+
+<!-- Movie Section after Coming Soon -->
+    <h1 class="section-title" id="movies"> Movies  </h1>
+
+    <div class="media-container">
+      <div class="media-scroller">
+  
+        <!--   Group 5 -->
+        <div class="media-group" id="group-5">
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/turning red.jpg"
+              alt="turning red poster">
+              <h4 class="movie-title"> Turning Red </h4>
+              <p class="movie-desc"> A 13-year-old girl named Meilin turns into a giant red panda whenever she gets too excited. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/XdKzUbAiswE';"><div>Play</div></button>
+              <button class="banner_button" id="addToWatchList"><div>My List</div></button>
+            </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/john wick chapter 4.jpg"
+              alt="john wick chapter 4 poster">
+              <h4 class="movie-title"> John Wick Chapter 3: Parabellum </h4>
+              <p class="movie-desc"> John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/M7XM597XO94';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/minions.jpg"
+              alt="minions poster">
+              <h4 class="movie-title"> Minions: Rise of Gru </h4>
+              <p class="movie-desc"> The untold story of one twelve-year-old's dream to become the world's greatest supervillain. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/6DxjJzmYsXo';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the kissing booth.jpg"
+              alt="the kissing booth poster">
+              <h4 class="movie-title"> The Kissing Booth </h4>
+              <p class="movie-desc"> A high school student is forced to confront her secret crush at a kissing booth. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/7bfS6seiLhk';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the next 365 days.png"
+              alt="the next 365 days poster">
+              <h4 class="movie-title"> The Next 365 Days </h4>
+              <p class="movie-desc"> Laura and Massimo are back and stronger than ever. But Massimo's family ties and a mysterious man bidding for Laura's heart complicate the lovers' lives. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/pyM3z73oMAk';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+  
+          <a class="next" href="#group-6" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 6   -->
+        <div class="media-group" id="group-6">
+          <a class="previous" href="#group-5">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the old guard.jpg"
+              alt="the old guard poster">
+              <h4 class="movie-title"> The Old Guard </h4>
+              <p class="movie-desc"> A covert team of immortal mercenaries is suddenly exposed and must now fight to keep their identity a secret just as an unexpected new member is discovered. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/aK-X2d0lJ_s';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/through my window.jpg"
+              alt="through my window poster">
+              <h4 class="movie-title"> Through My Window </h4>
+              <p class="movie-desc"> Raquel's longtime crush on her next-door neighbor turns into something more when he starts developing feelings for her, despite his family's objections. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/_zxhK3Z-R0c';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/madea homecoming.jpg"
+              alt="madea homecoming poster">
+              <h4 class="movie-title"> Madea: Homecoming </h4>
+              <p class="movie-desc"> Madea's back hallelujer. And she's not putting up with any nonsense as family drama erupts at her great-grandson's college graduation celebration. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/afJXk-RgzoQ';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/senior year.jpg"
+              alt="senior year poster">
+              <h4 class="movie-title"> Senior Year </h4>
+              <p class="movie-desc"> The film stars Rebel Wilson (who also produced) as a 37-year-old woman who awakens from a 20-year coma and decides to go back to high school to earn her diploma </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/HCtDkpe89aY';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the perfect pairing.jpg"
+              alt="perfect pairing poster">
+              <h4 class="movie-title"> A Perfect Pairing </h4>
+              <p class="movie-desc"> A Perfect Pairing is a 2022 American romantic comedy film. The film follows the story of Lola, an LA-based wine executive. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/WR21TH-6LfY';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <a class="next" href="#group-7" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 7   -->
+        <div class="media-group" id="group-7">
+          <a class="previous" href="#group-6">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/call me by your name.jpg"
+              alt="call me by your name poster">
+              <h4 class="movie-title"> Call Me By Your Name </h4>
+              <p class="movie-desc"> In 1980s Italy, romance blossoms between a seventeen-year-old student and the older man hired as his father's research assistant. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Z9AYPxH5NTM';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/waves.jpg"
+              alt="waves poster">
+              <h4 class="movie-title"> Waves </h4>
+              <p class="movie-desc"> Traces the journey of a suburban family - led by a well-intentioned but domineering father - as they navigate love, forgiveness, and coming together in the aftermath of a loss. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/V5z3cr8AB5g';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/endless love.jpg"
+              alt="endless love poster">
+              <h4 class="movie-title"> Endless Love </h4>
+              <p class="movie-desc"> The story of a privileged girl and a charismatic boy whose instant desire sparks a love affair made only more reckless by parents trying to keep them apart. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/NTAzn4W48gc';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the lucky ones.jpg"
+              alt="the lucky one poster">
+              <h4 class="movie-title"> The Lucky Ones </h4>
+              <p class="movie-desc"> A Marine travels to Louisiana after serving three tours in Iraq and searches for the unknown woman he believes was his good luck charm during the war. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/9w8lE83oYeM';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/love and other drugs.jpg"
+              alt="love and other drugs poster">
+              <h4 class="movie-title"> Love & Other Drugs </h4>
+              <p class="movie-desc"> In 1990s Pittsburgh, a medicine peddler starts a relationship with a young woman suffering from Parkinson's disease. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/h6w7Dh-QxzY';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <a class="next" href="#group-8" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!--  Group 8  -->
+        <div class="media-group" id="group-8">
+          <a class="previous" href="#group-7">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/red notice.jpg"
+              alt="red notice poster">
+              <h4 class="movie-title"> Red Notice </h4>
+              <p class="movie-desc"> An Interpol agent successfully tracks down the world's most wanted art thief, with help from a rival thief. But nothing is as it seems, as a series of double-crosses ensue. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Pj0wz7zu3Ms';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/american underdog.jpg"
+              alt="american underdog poster">
+              <h4 class="movie-title"> American Underdog </h4>
+              <p class="movie-desc"> The story of NFL MVP and Hall of Fame quarterback Kurt Warner, who went from stocking shelves at a supermarket to becoming an American Football star. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/_6rn-6lKBJ8';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/persuasion.jpg"
+              alt="persuasion poster">
+              <h4 class="movie-title"> Persuasion </h4>
+              <p class="movie-desc"> Eight years after Anne Elliot was persuaded not to marry a dashing man of humble origins, they meet again. Will she seize her second chance at true love? </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Fz7HmgPJQak';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the unforgivable.jpg"
+              alt="the unforgivable poster">
+              <h4 class="movie-title"> The Unforgivable </h4>
+              <p class="movie-desc"> A woman is released from prison after serving a sentence for a violent crime and re-enters a society that refuses to forgive her past. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/JNUjx7LZoiU';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the notebook.jpg"
+              alt="the notebook poster">
+              <h4 class="movie-title"> The Notebook </h4>
+              <p class="movie-desc"> A poor yet passionate young man (Ryan Gosling) falls in love with a rich young woman (Rachel McAdams), giving her a sense of freedom, but they are soon separated because of their social differences. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/BjJcYdEOI0k';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+        </div>
+  
+        <div class="navigation-indicators">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+      </div>
+    </div>
+
+    <svg>
+      <symbol id="next" viewBox="0 0 256 512">
+        <path fill="White"
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+      </symbol>
+  
+      <symbol id="previous" viewBox="0 0 256 512">
+        <path fill="White"
+          d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+      </symbol>
+    </svg>
+
+<!-- TV Shows section -->
+    <h1 class="section-title" id="tvshows"> TV Shows </h1>
+    <div class="media-container">
+      <div class="media-scroller">
+  
+        <!--   Group 9 -->
+        <div class="media-group" id="group-9">
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/You 1.jpg"
+              alt="you poster">
+              <h4 class="movie-title"> You </h4>
+              <p class="movie-desc"> A dangerously charming, intensely obsessive young man goes to extreme measures to insert himself into the lives of those he is transfixed by. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/xXBTImqyeU0';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+            </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/Never have I ever.webp"
+              alt="never have i ever poster">
+              <h4 class="movie-title"> Never Have I Ever </h4>
+              <p class="movie-desc"> The complicated life of a modern-day first generation Indian American teenage girl, inspired by Mindy Kaling's own childhood. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/d_N99x0gAAk';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/Stranger things.webp"
+              alt="stranger things poster">
+              <h4 class="movie-title"> Stranger Things </h4>
+              <p class="movie-desc"> When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/b9EkMc79ZSU';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the queens gambit.webp"
+              alt="the queens gambit poster">
+              <h4 class="movie-title"> The Queen's Gambit </h4>
+              <p class="movie-desc"> Orphaned at the tender age of nine, prodigious introvert Beth Harmon discovers and masters the game of chess in 1960s USA. But child stardom comes at a price. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/oZn3qSgmLqI';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the flash.jpg"
+              alt="the flash poster">
+              <h4 class="movie-title"> The Flash </h4>
+              <p class="movie-desc"> After being struck by lightning, Barry Allen wakes up from his coma to discover he's been given the power of super speed, becoming the Flash, and fighting crime in Central City. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Yj0l7iGKh8g';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+  
+          <a class="next" href="#group-10" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 10   -->
+        <div class="media-group" id="group-10">
+          <a class="previous" href="#group-9">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the vampire diaries.jpg"
+              alt="vampire diaries poster">
+              <h4 class="movie-title"> The Vampire Diaries </h4>
+              <p class="movie-desc"> The lives, loves, dangers and disasters in the town, Mystic Falls, Virginia. Creatures of unspeakable horror lurk beneath this town as a teenage girl is suddenly torn between two vampire brothers. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/BmVmhjjkN4E';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the originals.jpg"
+              alt="the originals poster">
+              <h4 class="movie-title"> The Originals </h4>
+              <p class="movie-desc"> A family of power-hungry thousand-year-old vampires look to take back the city that they built and dominate all those who have done them wrong. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/GXrDYboUnnw';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/teen wolf.jpg"
+              alt="teen wolf poster">
+              <h4 class="movie-title"> Teen Wolf </h4>
+              <p class="movie-desc"> An average high school student and his best friend get caught up in some trouble causing him to receive a werewolf bite. As a result they find themselves in the middle of all sorts of dramas in Beacon Hills. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/1rCYDbefnmA';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/vampire academy.jpg"
+              alt="vampire academy poster">
+              <h4 class="movie-title"> Vampire Academy </h4>
+              <p class="movie-desc"> In a world of privilege and glamour, two young women's friendship transcends their strikingly different classes as they prepare to complete their education and enter royal vampire society. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Gw_xrllOGu0';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/only murders in the building.jpg"
+              alt="only murders in the building poster">
+              <h4 class="movie-title"> Only Murders In The Building </h4>
+              <p class="movie-desc"> Three strangers who share an obsession with true crime suddenly find themselves caught up in one. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/JRgyBaTulbs';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <a class="next" href="#group-11" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 11   -->
+        <div class="media-group" id="group-11">
+          <a class="previous" href="#group-10">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/sex life.jpg"
+              alt="sex life poster">
+              <h4 class="movie-title"> Sex Life  </h4>
+              <p class="movie-desc"> A suburban mother of two takes a fantasy-charged trip down memory lane that sets her very married present on a collision course with her wild-child past. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/jCS-Y6Sp7CI';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/ginny and georgia.jpg"
+              alt="ginny and georgia poster">
+              <h4 class="movie-title"> Ginny & Georgia </h4>
+              <p class="movie-desc"> Ginny Miller, an angsty fifteen-year-old, often feels more mature than her thirty-year-old mother, the irresistible and dynamic Georgia Miller. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/e34_mMhe4WQ';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/emily in paris.jpg"
+              alt="emily in paris poster">
+              <h4 class="movie-title"> Emily In Paris </h4>
+              <p class="movie-desc"> A young American woman from the Midwest is hired by a marketing firm in Paris to provide them with an American perspective on things. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/lptctjAT-Mk';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/13 reasons why.jpg"
+              alt="13 reasons why poster">
+              <h4 class="movie-title"> 13 Reasons Why </h4>
+              <p class="movie-desc"> Follows teenager Clay Jensen, in his quest to uncover the story behind his classmate and crush, Hannah, and her decision to end her life. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/QkT-HIMSrRk';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/jane the virgin.jpg"
+              alt="jane the virgin poster">
+              <h4 class="movie-title"> Jane The Virgin </h4>
+              <p class="movie-desc"> A young, devout Catholic woman discovers that she was accidentally artificially inseminated. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/JOKUcwrPFmg';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <a class="next" href="#group-12" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!--  Group 12  -->
+        <div class="media-group" id="group-12">
+          <a class="previous" href="#group-11">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/gilmore girls.jpg"
+              alt="gilmore girls poster">
+              <h4 class="movie-title"> The Gilmore Girls </h4> 
+              <p class="movie-desc"> A dramedy centering around the relationship between a thirtysomething single mother and her teen daughter living in Stars Hollow, Connecticut. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/YwY86TlfDI0';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/too hot to handle.jpg"
+              alt="too hot to handle poster">
+              <h4 class="movie-title"> Too Hot To Handle </h4>
+              <p class="movie-desc"> On the shores of paradise, gorgeous singles meet and mingle. But there's a twist. To win a $100,000 grand prize, they'll have to give up sex. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/2JgPJpgnut4';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the arrow.jpg"
+              alt="arrow poster">
+              <h4 class="movie-title"> The Arrow </h4>
+              <p class="movie-desc"> Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/XQS7JkQmlx8';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/supergirl.jpg"
+              alt="supergirl poster">
+              <h4 class="movie-title"> Supergirl </h4>
+              <p class="movie-desc"> The adventures of Superman's cousin in her own superhero career. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/mlgL6FbqsVI';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/she hulk.jpg"
+              alt="she hulk poster">
+              <h4 class="movie-title"> She Hulk </h4>
+              <p class="movie-desc"> Jennifer Walters navigates the complicated life of a single, 30-something attorney who also happens to be a green 6-foot-7-inch superpowered Hulk. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/u7JsKhI2An0';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+        </div>
+  
+        <div class="navigation-indicators">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+      </div>
+    </div>
+
+    <svg>
+      <symbol id="next" viewBox="0 0 256 512">
+        <path fill="White"
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+      </symbol>
+  
+      <symbol id="previous" viewBox="0 0 256 512">
+        <path fill="White"
+          d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+      </symbol>
+    </svg>
+
+<!-- Popular Movies Section -->
+    <h1 class="section-title" id="popular"> Popular </h1>
+
+    <div class="media-container">
+      <div class="media-scroller">
+  
+        <!--   Group 13 -->
+        <div class="media-group" id="group-13">
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the karate kid.webp"
+              alt="karate kid poster">
+              <h4 class="movie-title"> The Karate Kid </h4>
+              <p class="movie-desc"> A martial arts master agrees to teach karate to a bullied teenager. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/xlnm0NtPoVs';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+            </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/after 1.jpg"
+              alt="after poster">
+              <h4 class="movie-title"> After </h4>
+              <p class="movie-desc"> A young woman falls for a guy with a dark secret and the two embark on a rocky relationship. Based on the novel by Anna Todd. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/rPTf0Gw5-Bg';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/atlantis.jpg"
+              alt="atlantis poster">
+              <h4 class="movie-title"> Atlantis: The Lost Empire </h4>
+              <p class="movie-desc"> A young linguist named Milo Thatch joins an intrepid group of explorers to find the mysterious lost continent of Atlantis </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/sZIimDPZQwg';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/dirty dancing.jpg"
+              alt="dirty dancing poster">
+              <h4 class="movie-title"> Dirty Dancing </h4>
+              <p class="movie-desc"> Spending the summer at a Catskills resort with her family, Frances 'Baby' Houseman falls in love with the camp's dance instructor, Johnny Castle. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/eIcmQNy9FsM';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/how to train your dragon.jpg"
+              alt="how train your dragon poster">
+              <h4 class="movie-title"> How To Train Your Dragon </h4>
+              <p class="movie-desc"> A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/2AKsAxrhqgM';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+  
+          <a class="next" href="#group-14" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 14   -->
+        <div class="media-group" id="group-14">
+          <a class="previous" href="#group-13">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/grease.jpg"
+              alt="grease poster">
+              <h4 class="movie-title"> Grease </h4>
+              <p class="movie-desc"> Good girl Sandy Olsson and greaser Danny Zuko fell in love over the summer. When they unexpectedly discover they're now in the same high school, will they be able to rekindle their romance? </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/qDKo8DNpwOw';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/enough.jpg"
+              alt="enough poster">
+              <h4 class="movie-title"> Enough </h4>
+              <p class="movie-desc"> After running away fails, a terrified woman empowers herself in order to battle her abusive husband. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/L1WWhWsvOZg';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/how to lose a guy in 10 days.jpg"
+              alt="how to lose a guy in 10 days poster">
+              <h4 class="movie-title"> How To Lose A Guy In 10 Days </h4>
+              <p class="movie-desc"> Benjamin Barry is an advertising executive and ladies' man who, to win a big campaign, bets that he can make a woman fall in love with him in 10 days. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/2ZMGk_Ml1fc';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/saturday night fever.jpg"
+              alt="saturday night fever poster">
+              <h4 class="movie-title"> Saturday Night Fever </h4>
+              <p class="movie-desc"> Anxious about his future after high school, a 19-year-old Italian-American from Brooklyn tries to escape the harsh reality of his bleak family life by dominating the dance floor at the local disco. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/RZTP586-Y9E';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/captain america.jpg"
+              alt="captain america poster">
+              <h4 class="movie-title"> Captain America: The First Avenger </h4>
+              <p class="movie-desc"> Steve Rogers, a rejected military soldier, transforms into Captain America after taking a dose of a 'Super-Soldier serum'. But being Captain America comes at a price as he attempts to take down a warmonger and a terrorist organization. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/JerVrbLldXw';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <a class="next" href="#group-15" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 15   -->
+        <div class="media-group" id="group-15">
+          <a class="previous" href="#group-14">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/venom.jpg"
+              alt="venom poster">
+              <h4 class="movie-title"> Venom </h4>
+              <p class="movie-desc"> A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/u9Mv98Gr5pY';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/transformers.jpg"
+              alt="transformers poster">
+              <h4 class="movie-title"> Transformers </h4>
+              <p class="movie-desc"> An ancient struggle between two Cybertronian races, the heroic Autobots and the evil Decepticons, comes to Earth, with a clue to the ultimate power held by a teenager. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/v8ItGrI-Ou0';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/jumper.jpg"
+              alt="jumper poster">
+              <h4 class="movie-title"> Jumper </h4>
+              <p class="movie-desc"> A teenager with teleportation abilities suddenly finds himself in the middle of an ancient war between those like him and their sworn annihilators. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/DtacNQkFHvo';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the last airbender.jpg"
+              alt="the last airbender poster">
+              <h4 class="movie-title"> The Last Airbender </h4>
+              <p class="movie-desc"> Follows the adventures of Aang, a young successor to a long line of Avatars, who must master all four elements and stop the Fire Nation from enslaving the Water Tribes and the Earth Kingdom. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/WdoiHMCVqMQ';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/hunger games.jpg"
+              alt="hunger games poster">
+              <h4 class="movie-title"> The Hunger Games </h4>
+              <p class="movie-desc"> Katniss Everdeen voluntarily takes her younger sister's place in the Hunger Games: a televised competition in which two teenagers from each of the twelve Districts of Panem are chosen at random to fight to the death </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/mfmrPu43DF8';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <a class="next" href="#group-16" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!--  Group 16  -->
+        <div class="media-group" id="group-16">
+          <a class="previous" href="#group-15">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/pacific rim uprising.jpg"
+              alt="pacific rim poster">
+              <h4 class="movie-title"> Pacific Rim: Uprising </h4>
+              <p class="movie-desc"> Jake Pentecost, son of Stacker Pentecost, reunites with Mako Mori to lead a new generation of Jaeger pilots, including rival Lambert and 15-year-old hacker Amara, against a new Kaiju threat. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/_EhiLLOhVis';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/divergent.jpg"
+              alt="divergent poster">
+              <h4 class="movie-title"> Divergent </h4>
+              <p class="movie-desc"> In a world divided by factions based on virtues, Tris learns she's Divergent and won't fit in. When she discovers a plot to destroy Divergents, Tris and the mysterious Four must find out what makes Divergents dangerous before it's too late. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Aw7Eln_xuWc';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/another cinderella story.jpg"
+              alt="another cinderella story poster">
+              <h4 class="movie-title"> Another Cinderella Story </h4>
+              <p class="movie-desc"> Mary lives with her evil stepmom/sisters and slaves for them. At the high school masquerade ball, she gets to dance with her pop idol, Joey. Running home before midnight, she drops her Zune. Joey tries to find the girl who fits the Zune. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/dEpWl0kmJdQ';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/avatar.jpg"
+              alt="avatar poster">
+              <h4 class="movie-title"> Avatar </h4>
+              <p class="movie-desc"> A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/5PSNL1qE6VY';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the hating game.jpg"
+              alt="hating game poster">
+              <h4 class="movie-title"> The Hating Game </h4>
+              <p class="movie-desc"> Resolving to achieve professional success without compromising her ethics, Lucy embarks on a ruthless game of one-upmanship against cold and efficient nemesis Joshua, a rivalry that is complicated by her growing attraction to him. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/0D2sJiseGQA';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+        </div>
+  
+        <div class="navigation-indicators">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+      </div>
+    </div>
+
+    <svg>
+      <symbol id="next" viewBox="0 0 256 512">
+        <path fill="White"
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+      </symbol>
+  
+      <symbol id="previous" viewBox="0 0 256 512">
+        <path fill="White"
+          d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+      </symbol>
+    </svg>
+
+<!-- Bollywood Movies Section -->
+    <h1 class="section-title"> Bollywood </h1>
+
+    <div class="media-container">
+      <div class="media-scroller">
+  
+        <!--   Group 17 -->
+        <div class="media-group" id="group-17">
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/hamari adhuri kahani.jpg"
+              alt="hamari adhuri kahani poster">
+              <h4 class="movie-title"> Hamari Adhuri Kahani </h4>
+              <p class="movie-desc"> A single mother finds solace with a wealthy, but lonely hotel magnate, together they find love until her past comes back to confront her. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/2fiT_TJlySk';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+            </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/sanam teri kasam.jpg"
+              alt="sanam teri kasam poster">
+              <h4 class="movie-title"> Sanam Teri Kasam </h4>
+              <p class="movie-desc"> After being disowned by her family, an awkward librarian relies on the help of her brooding neighbour. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/1IpBoMWRjm8';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/kuch kuch hota hai.jpg"
+              alt="kuch kuch hota hai poster">
+              <h4 class="movie-title"> Kuch Kuch Hota Hai </h4>
+              <p class="movie-desc"> During their college years, Anjali was in love with her best-friend Rahul, but he had eyes only for Tina. Years later, Rahul and the now-deceased Tina's eight-year-old daughter attempts to reunite her father and Anjali. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/OtGzATlvw_0';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/khabhi khushi khabie gham.jpg"
+              alt="khabhi khushi khabhi gham poster">
+              <h4 class="movie-title"> Khabhi Khushi Khabie Gham </h4>
+              <p class="movie-desc"> After marrying a poor woman, rich Rahul is disowned by his father and moves to London to build a new life. Years later, his now-grown younger brother Rohan embarks on a mission to bring Rahul back home and reunite the family. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/7uY1JbWZKPA';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/dil hai tumhaara.jpg"
+              alt="dil hai tumhaara poster">
+              <h4 class="movie-title"> Dil Hai Tumhaara </h4>
+              <p class="movie-desc"> Raising her two daughters, Saritaji 'Rekha' fears that history might repeat itself when both of them fall for the same guy. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/MhFDg9RsDlg';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+  
+          <a class="next" href="#group-18" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 18   -->
+        <div class="media-group" id="group-18">
+          <a class="previous" href="#group-17">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/tu junooniyat.jpg"
+              alt="tu junooniyat poster">
+              <h4 class="movie-title"> Tu Junooniyat </h4>
+              <p class="movie-desc"> Captain Jahan Bakshi rescues a Punjabi girl, Suhani. This starts a friendship that evolves into a passionate love affair. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/8vicEGLOEdw';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/ae dil he mushkil.jpg"
+              alt="ae dil hai mushkil poster">
+              <h4 class="movie-title"> Ae Dil He Mushkil </h4>
+              <p class="movie-desc"> This story explores love - the shapes it takes, the ways it changes us and the exhilarating and often terrifying ride it takes us on. It is the journey of two characters, Alizeh and Ayan, as they navigate life, love and heartbreak. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Z_PODraXg4E';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/dilwale dulhania le jeyenge.jpg"
+              alt="dilwale le jeyenge poster">
+              <h4 class="movie-title"> Dilwale Dulhania Le Jeyenge </h4>
+              <p class="movie-desc"> When Raj meets Simran in Europe, it isn't love at first sight but when Simran moves to India for an arranged marriage, love makes its presence felt. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/oIZ4U21DRlM';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/kabir singh.jpg"
+              alt="kabir singh poster">
+              <h4 class="movie-title"> Kabir Singh </h4>
+              <p class="movie-desc"> An exalted but short-fused surgeon plunges into a spiral of drugs, alcohol and rage after his intense relationship with his girlfriend turbulently ends </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/RiANSSgCuJk';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/om shanti om.jpg"
+              alt="om shanti om poster">
+              <h4 class="movie-title"> Om Shanti Om </h4>
+              <p class="movie-desc"> In the 1970s, Om, an aspiring actor, is murdered, but is immediately reincarnated into the present day. He attempts to discover the mystery of his demise and find Shanti, the love of his previous life. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/9oeGoQGt7Ao';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <a class="next" href="#group-19" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 19   -->
+        <div class="media-group" id="group-19">
+          <a class="previous" href="#group-18">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/student of the year.jpg"
+              alt="student of the year poster">
+              <h4 class="movie-title"> Student of The Year </h4>
+              <p class="movie-desc"> Several alumni reminisce about their final year at St. Theresa's College and the events that shaped their lives. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/fivOhPjX9YM';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/half girlfriend.jpg"
+              alt="half girlfriend poster">
+              <h4 class="movie-title"> Half Girlfriend </h4>
+              <p class="movie-desc"> Madhav meets a girl named Riya and falls in love. After stuggling to convince her to be his girlfriend, she half heartedly agrees to be his 'Half Girlfriend' </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/KmlBnmyelHI';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/bang bang.jpg"
+              alt="bang bang poster">
+              <h4 class="movie-title"> Bang Bang </h4>
+              <p class="movie-desc"> A young bank receptionist gets mixed up with Rajveer Nanda, a man who has a mysterious background. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/MGXQ8bE6lW4';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/yeh jawaani hai deewani.jpg"
+              alt="yeh jawaani hai deewani poster">
+              <h4 class="movie-title"> Yeh Jawaani Hai Deewani </h4>
+              <p class="movie-desc"> Kabir and Naina bond during a trekking trip. Before Naina can express herself, Kabir leaves India to pursue his career. They meet again years later, but he still cherishes his dreams more than bonds </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Rbp2XUSeUNE';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/baar baar dekho.jpg"
+              alt="baar baar dekho poster">
+              <h4 class="movie-title"> Baar Baar Dekho </h4>
+              <p class="movie-desc"> The highs and lows of a romantic relationship are examined through flashbacks and flash-forwards. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/3uPtQp8ZT-Q';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <a class="next" href="#group-20" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!--  Group 20  -->
+        <div class="media-group" id="group-20">
+          <a class="previous" href="#group-19">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/ram leela.jpg"
+              alt="ram leela poster">
+              <h4 class="movie-title"> Goliyon Ki Raasleea Ram-Leela </h4>
+              <p class="movie-desc"> Modern adaptation of William Shakespeare's 'Romeo and Juliet' with an Indian twist, the film focuses on the story of Ram and Leela, their love, lust and the drama afterwards. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/StphRCLkx6Q';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the sky is pink.jpg"
+              alt="the sky is pink poster">
+              <h4 class="movie-title"> The Sky Is Pink </h4>
+              <p class="movie-desc"> Based on the love story of a couple spanning 25 years and told through the lens of their spunky teenage daughter Aisha Chaudhary, who was diagnosed with pulmonary fibrosis. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/prwUFBsDRLk';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/bajirao mastani.jpg"
+              alt="bajirao mastani poster">
+              <h4 class="movie-title"> Bajirao Mastani </h4>
+              <p class="movie-desc"> An account of the romance between the Maratha general, Baji Rao I and Mastani, princess of Bundelkhand. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/eHOc-4D7MjY';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/padmaavati.jpg"
+              alt="padmavaati poster">
+              <h4 class="movie-title"> Padmavaati </h4>
+              <p class="movie-desc"> Set in medieval Rajasthan, Queen Padmavati is married to a noble king and they live in a prosperous fortress with their subjects until an ambitious Sultan hears of Padmavati's beauty and forms an obsessive love for the Queen of Mewar. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/X_5_BLt76c0';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/my name is khan.jpg"
+              alt="my name is khan poster">
+              <h4 class="movie-title"> My Name Is Khan </h4>
+              <p class="movie-desc"> An Indian Muslim man with Asperger's syndrome takes a challenge to speak to the President of the United States seriously and embarks on a cross-country journey. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/nqxgYT3TYzY';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+        </div>
+  
+        <div class="navigation-indicators">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+      </div>
+    </div>
+    
+    <svg>
+      <symbol id="next" viewBox="0 0 256 512">
+        <path fill="White"
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+      </symbol>
+  
+      <symbol id="previous" viewBox="0 0 256 512">
+        <path fill="White"
+          d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+      </symbol>
+    </svg>
+
+<!-- Movies that have been previously watched -->
+    <h1 class="section-title"> Watch it again! </h1>
+
+    <div class="media-container">
+      <div class="media-scroller">
+  
+        <!--   Group 21 -->
+        <div class="media-group" id="group-21">
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/to all the boys.jpg"
+              alt="to all the boys poster">
+              <h4 class="movie-title"> To All The Boys I've Loved Before </h4>
+              <p class="movie-desc"> A teenage girl's secret love letters are exposed and wreak havoc on her love life. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/555oiY9RWM4';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+            </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/saturday night fever.jpg"
+              alt="saturday night fever poster">
+              <h4 class="movie-title"> Saturday Night Fever </h4>
+              <p class="movie-desc"> Anxious about his future after high school, a 19-year-old Italian-American from Brooklyn tries to escape the harsh reality of his bleak family life by dominating the dance floor at the local disco. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/RZTP586-Y9E';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/real steel.jpg"
+              alt="real steel poster">
+              <h4 class="movie-title"> Real Steel </h4>
+              <p class="movie-desc"> In the near future, robot boxing is a top sport. A struggling ex-boxer feels he's found a champion in a discarded robot. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/T75j9CoBVzE';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/top gun.webp"
+              alt="top gun poster">
+              <h4 class="movie-title"> Top Gun </h4>
+              <p class="movie-desc"> As students at the United States Navy's elite fighter weapons school compete to be best in the class, one daring young pilot learns a few things from a civilian instructor that are not taught in the classroom </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/xa_z57UatDY';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/yu gi oh.jpg"
+              alt="yu gi oh poster">
+              <h4 class="movie-title"> Yu Gi Oh! </h4>
+              <p class="movie-desc"> Yugi Moto solves an Ancient Egyptian Puzzle and brings forth a dark and powerful alter ego. Whenever he and his friends are threatened by evil in Duel Monster Card Game, this alter ego breaks out to save them. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/FlZsX0nz1r4';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+  
+          <a class="next" href="#group-22" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 22   -->
+        <div class="media-group" id="group-22">
+          <a class="previous" href="#group-21">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/winx club annimated series.jpg"
+              alt="winx club annimated series poster">
+              <h4 class="movie-title"> Winx Club </h4>
+              <p class="movie-desc"> At Alfea College, fairy warriors from all over the universe study and train to improve their magic powers. Bloom, a girl from Earth, joins them after discovering her own special abilities. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/_wCvB9fa_0c';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/truth or dare.jpg"
+              alt="truth or dare poster">
+              <h4 class="movie-title"> Truth or Dare </h4>
+              <p class="movie-desc"> A harmless game of Truth or Dare among friends turns deadly when someone - or something - begins to punish those who tell a lie or refuse the dare. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Cgnk3MLw9TM';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/acrimony.jpg"
+              alt="acrimony poster">
+              <h4 class="movie-title"> Acrimony </h4>
+              <p class="movie-desc"> A faithful wife, tired of standing by her devious husband, is enraged when it becomes clear she has been betrayed. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/wlpunOUxYSo';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/midnight sun.jpg"
+              alt="midnight sun poster">
+              <h4 class="movie-title"> Midnight Sun </h4>
+              <p class="movie-desc"> A 17-year-old girl suffers from a condition that prevents her from being out in the sunlight. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/fEskVQgtwaI';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/ae dil he mushkil.jpg"
+              alt="ae dil hai mushkil poster">
+              <h4 class="movie-title"> Ae Dil He Mushkil </h4>
+              <p class="movie-desc"> This story explores love - the shapes it takes, the ways it changes us and the exhilarating and often terrifying ride it takes us on. It is the journey of two characters, Alizeh and Ayan, as they navigate life, love and heartbreak. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Z_PODraXg4E';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <a class="next" href="#group-23" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!-- Group 23   -->
+        <div class="media-group" id="group-23">
+          <a class="previous" href="#group-22">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/herbie.jpg"
+              alt="herbie poster">
+              <h4 class="movie-title"> Herbie: Fully Loaded </h4>
+              <p class="movie-desc"> Maggie Peyton, the new owner of Herbie, Number 53, the free-wheelin' Volkswagen bug with a mind of its own, puts the car through its paces on the road to becoming a NASCAR competitor. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/zD9De1OkJ4o';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the mummy.jpg"
+              alt="the mummy poster">
+              <h4 class="movie-title"> The Mummy </h4>
+              <p class="movie-desc"> An ancient Egyptian princess is awakened from her crypt beneath the desert, bringing with her malevolence grown over millennia, and terrors that defy human comprehension </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/IjHgzkQM2Sg';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/365 days.jpg"
+              alt="365 days poster">
+              <h4 class="movie-title"> 365 Days </h4>
+              <p class="movie-desc"> Massimo is a member of the Sicilian Mafia family and Laura is a sales director. She does not expect that on a trip to Sicily trying to save her relationship, Massimo will kidnap her and give her 365 days to fall in love with him. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/aXtNikiU9lo';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the cutting edge.jpg"
+              alt="the cutting edge poster">
+              <h4 class="movie-title"> The Cutting Edge: Going For The Gold </h4>
+              <p class="movie-desc"> Two ice skaters (Christy Carlson Romano, Ross Thomas) develop a love-hate relationship while dreaming of Olympic glory. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/FaGSq6acOtM';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/spiderman.jpg"
+              alt="spiderman poster">
+              <h4 class="movie-title"> Spiderman: No Way Home </h4>
+              <p class="movie-desc"> With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/rt-2cxAiPJk';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <a class="next" href="#group-24" aria-label="next">
+            <svg>
+              <use href="#next"></use>
+            </svg>
+          </a>
+        </div>
+  
+        <!--  Group 24  -->
+        <div class="media-group" id="group-24">
+          <a class="previous" href="#group-23">
+            <svg>
+              <use href="#previous"></use>
+            </svg>
+          </a>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/i feel pretty.jpg"
+              alt="i feel pretty poster">
+              <h4 class="movie-title"> I Feel Pretty </h4>
+              <p class="movie-desc"> A woman struggling with insecurity wakes from a fall believing she is the most beautiful and capable woman on the planet. Her new confidence empowers her to live fearlessly, but what happens when she realizes her appearance never changed? </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/Yi60f1jPfto';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/the vampire diaries.jpg"
+              alt="the vampire diaries poster">
+              <h4 class="movie-title"> The Vampire Diaries </h4>
+              <p class="movie-desc"> The lives, loves, dangers and disasters in the town, Mystic Falls, Virginia. Creatures of unspeakable horror lurk beneath this town as a teenage girl is suddenly torn between two vampire brothers. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/BmVmhjjkN4E';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/ram leela.jpg"
+              alt="ram leela poster">
+              <h4 class="movie-title"> Ram Leela  </h4>
+              <p class="movie-desc"> Modern adaptation of William Shakespeare's 'Romeo and Juliet' with an Indian twist, the film focuses on the story of Ram and Leela, their love, lust and the drama afterwards. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/StphRCLkx6Q';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/fast and furious.jpg"
+              alt="fast and furious poster">
+              <h4 class="movie-title"> The Fast and the Furious </h4>
+              <p class="movie-desc"> Los Angeles police officer Brian O'Conner must decide where his loyalty really lies when he becomes enamored with the street racing world he has been sent undercover to destroy. </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/2TAOizOnNPo';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+          <div class="media-element">
+            <img
+              src="../Home Page/Images/xxx.jpg"
+              alt="xxx poster">
+              <h4 class="movie-title"> XXX: Return of Xander Cage </h4>
+              <p class="movie-desc"> Xander Cage is left for dead after an incident, though he secretly returns to action for a new, tough assignment with his handler Augustus Gibbons </p>
+              <button class="banner_button" onclick="window.location.href='https://youtu.be/xEuM4IUFWu8';"><div>Play</div></button>
+              <button class="banner_button"><div>My List</div></button>
+          </div>
+        </div>
+  
+        <div class="navigation-indicators">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+  
+      </div>
+    </div>
+    
+    <svg>
+      <symbol id="next" viewBox="0 0 256 512">
+        <path fill="White"
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z" />
+      </symbol>
+  
+      <symbol id="previous" viewBox="0 0 256 512">
+        <path fill="White"
+          d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+      </symbol>
+    </svg>
+
+<!-- JavaScript File -->
+<script src="../Home Page/JS.js"></script>
+
+
+</body>
+
+</html>
