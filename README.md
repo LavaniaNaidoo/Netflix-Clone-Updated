@@ -10,6 +10,7 @@ Files/Folders Needed To See This Project (in order):
     -Homepage(Index.html to see homepage of Netflix App)
 
 To begin navigating this project:
+
 1-) Start with the "landingPage.html" (located in the Landing Page Folder as well) to which you can see the basic structure and design as the     original Netflix Landing Page.
     -In the top right hand corner, you should see a simple "Sign-In" button to which it will redirect you to the next awesome page in my project!
 
